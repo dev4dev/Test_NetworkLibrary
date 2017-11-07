@@ -17,6 +17,6 @@ final public class NetworkLibrary {
 			if let data = data, let str = String(data: data, encoding: .utf8) {
 				callback(str)
 			}
-		}
+		}.resume()
 	}
 }
