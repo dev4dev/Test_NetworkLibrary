@@ -15,4 +15,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/dev4dev/Test_NetworkLibrary.git", :tag => s.version.to_s }
   s.source_files  = "Sources/**/*"
   s.frameworks  = "Foundation"
+  s.module_name = "NetworkLibrary"
 end
