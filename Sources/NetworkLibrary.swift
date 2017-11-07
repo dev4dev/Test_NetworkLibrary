@@ -9,7 +9,10 @@
 import Foundation
 
 final public class NetworkLibrary {
-	public class func get(url: URL, _ callback: @escaping (String) -> Void) {
+
+	public init() {}
+	
+	public func get(url: URL, _ callback: @escaping (String) -> Void) {
 		URLSession.shared.dataTask(with: url) { (data, _, _) in
 			if let data = data, let str = String(bytes: data, encoding: .utf8) {
 				callback(str)
