@@ -14,7 +14,7 @@ final public class NetworkLibrary {
 	
 	public func get(url: URL, _ callback: @escaping (String) -> Void) {
 		URLSession.shared.dataTask(with: url) { (data, _, _) in
-			if let data = data, let str = String(bytes: data, encoding: .utf8) {
+			if let data = data, let str = String(data: data, encoding: .utf8) {
 				callback(str)
 			}
 		}
